@@ -1,6 +1,6 @@
  locals { 
  org = "medium" 
- env = var.env 
+  
  }
 module "eks" {
     source = "../module"
