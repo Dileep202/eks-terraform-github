@@ -1,15 +1,15 @@
  locals { 
- org = "medium" 
+ 
   
  }
 module "eks" {
     source = "../module"
  
     cluster_name = var.cluster_name
-    cluster_name = "${local.env}-${local.org}-${var.cluster_name}"
-    vpc-name     = "${local.env}-${local.org}-${var.vpc-name}"
+    cluster_name = "var.cluster_name"
+    vpc-name     = "var.vpc-name"
     cidr_block   = var.cidr_block
-    igw-name    = "${local.env}-${local.org}-${var.igw-name}"
+    igw-name    = "var.igw-name"
     pub-subnet-count = var.pub-subnet-count
     pub-cidr-block = var.pub-cidr-block
     pub-availability-zone = var.pub-availability-zone
