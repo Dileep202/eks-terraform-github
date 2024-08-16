@@ -3,10 +3,13 @@
  env = var.env 
  }
 module "eks" {
-    source = "../module/eks.tf"
+    source = "../module"
     env = var.env
     cluster_name = var.cluster_name
-    vpc_id = aws_vpc.vpc.id
+    cluster_name = "${local.env}-${local.org}-${var.cluster_name}"
+    vpc-name     = "${local.env}-${local.org}-${var.vpc-name}"
+    cidr_block   = var.cidr_block
+    igw-name    = "${local.env}-${local.org}-${var.igw-name}"
     pub-subnet-count = var.pub-subnet-count
     pub-cidr-block = var.pub-cidr-block
     pub-availability-zone = var.pub-availability-zone
