@@ -4,7 +4,7 @@
  }
 module "eks" {
     source = "../module"
-    env = var.env
+ 
     cluster_name = var.cluster_name
     cluster_name = "${local.env}-${local.org}-${var.cluster_name}"
     vpc-name     = "${local.env}-${local.org}-${var.vpc-name}"
