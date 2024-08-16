@@ -3,7 +3,7 @@
  env = var.env 
  }
 module "eks" {
-    source = "../module/eks"
+    source = "../module/eks.tf"
     env = var.env
     cluster_name = var.cluster_name
     vpc_id = aws_vpc.vpc.id
