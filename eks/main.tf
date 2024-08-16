@@ -1,5 +1,6 @@
 module "eks" {
     source = "../module"
+    env    =  var.env
  
     cluster_name = var.cluster_name
     
