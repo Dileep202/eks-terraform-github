@@ -3,7 +3,6 @@ variable "region" {}
 variable "cluster_name" {}
 variable "cidr_block" {}
 variable "vpc-name" {}
-variable "env" {}
 variable "igw-name" {}
 variable "pub-subnet-count" {
     
