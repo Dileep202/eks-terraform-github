@@ -62,7 +62,7 @@ jobs:
         working-directory: .
     steps:
       - name: Terraform initialization
-        run: terraform init
+        run: terraform init --reconfigure
         env:
           TF_VAR_file: ${{ github.event.inputs.tfvars_file }}
           AWS_REGION: 'us-east-1'
